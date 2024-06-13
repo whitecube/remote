@@ -119,9 +119,9 @@ class Connection implements ConnectionInterface
             $gateway->setTimeout($timeout);
         }
 
-        $callback = $this->getCallback($callback);
+        $result = $gateway->run($this->formatCommands($commands));
 
-        $gateway->run($this->formatCommands($commands), $callback);
+        call_user_func($this->getCallback($callback), $result);
     }
 
     /**
