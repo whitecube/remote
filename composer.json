@@ -1,5 +1,5 @@
 {
-    "name": "laravelcollective/remote",
+    "name": "whitecube/remote",
     "description": "Remote SSH access for The Laravel Framework.",
     "license": "MIT",
     "homepage": "http://laravelcollective.com",
