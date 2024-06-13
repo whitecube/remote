@@ -121,18 +121,7 @@ class Connection implements ConnectionInterface
 
         $callback = $this->getCallback($callback);
 
-        $gateway->run($this->formatCommands($commands));
-
-        // After running the commands against the server, we will continue to ask for
-        // the next line of output that is available, and write it them out using
-        // our callback. Once we hit the end of output, we'll bail out of here.
-        while (true) {
-            if (is_null($line = $gateway->nextLine())) {
-                break;
-            }
-
-            call_user_func($callback, $line, $this);
-        }
+        $gateway->run($this->formatCommands($commands), $callback);
     }
 
     /**

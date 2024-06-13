@@ -280,7 +280,7 @@ class SecLibGateway implements GatewayInterface
      *
      * @param string $command
      *
-     * @return void
+     * @return string|bool
      */
     public function run($command)
     {
@@ -382,9 +382,7 @@ class SecLibGateway implements GatewayInterface
      */
     public function nextLine()
     {
-        $value = $this->getConnection()->open_channel(SSH2::CHANNEL_EXEC);
-
-        return $value === true ? null : $value;
+        return null;
     }
 
     /**
