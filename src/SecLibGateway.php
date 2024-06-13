@@ -2,12 +2,12 @@
 
 namespace Collective\Remote;
 
-use phpseclib\Net\SFTP;
-use phpseclib\Net\SSH2;
-use phpseclib\Crypt\RSA;
+use phpseclib3\Net\SFTP;
+use phpseclib3\Net\SSH2;
+use phpseclib3\Crypt\RSA;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use phpseclib\System\SSH\Agent;
+use phpseclib3\System\SSH\Agent;
 use Illuminate\Filesystem\Filesystem;
 
 class SecLibGateway implements GatewayInterface
